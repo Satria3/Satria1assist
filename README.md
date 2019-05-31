@@ -6,7 +6,7 @@ Satria1assist
 
 [![lineX](https://raw.githubusercontent.com/Satria3/logo1/blob/master/20181115_103958.png)](http://line.me/ti/p/~iia008)
 
-# SATRIAPY3
+# SATRIA1assist
 
 # TERMUX
 
