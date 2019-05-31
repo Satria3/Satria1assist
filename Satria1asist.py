@@ -19,26 +19,26 @@ import youtube_dl
 
 print ("======[ MEMBUAT AKUN B❂TTR❂X Bots]======")
 print ("===========[ ⊰์◉⊱B❂TTR❂X B❂T$⊰์◉⊱ ]=============")
-#satria = LineClient()
-satria = LineClient(authToken='EFzaG8hOHbbz0VtraAn0.fGIUiExEjuE1/OChSHYIia.1RJAexN6SfZSMQegaf8kgEcGC14ANJmJmsA5aUXDDuA=')
+satria = LineClient()
+#satria = LineClient(authToken='EFzaG8hOHbbz0VtraAn0.fGIUiExEjuE1/OChSHYIia.1RJAexN6SfZSMQegaf8kgEcGC14ANJmJmsA5aUXDDuA=')
 satria.log("Auth Token : " + str(satria.authToken))
 channel = LineChannel(satria)
 satria.log("Channel Access Token : " + str(channel.channelAccessToken))
 print ("AKUN BOTTROX BOTS 1")
-#ki = LineClient()
-ki = LineClient(authToken='EFJTzjjyM6qK83TuXbzf.MJLhO5r7vO8MsXweQmErVW.XTYcpjXk5eQ0boKL/dRTQOBaOmfW1V/VZTiOLWwDNvI=')
+ki = LineClient()
+#ki = LineClient(authToken='EFJTzjjyM6qK83TuXbzf.MJLhO5r7vO8MsXweQmErVW.XTYcpjXk5eQ0boKL/dRTQOBaOmfW1V/VZTiOLWwDNvI=')
 ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token  : " + str(channel1.channelAccessToken))
-print ("AKUN BOTTROX BOTS 2")
-#kz = LineClient()
-kz = LineClient(authToken='EFJTzjjyM6qK83TuXbzf.MJLhO5r7vO8MsXweQmErVW.XTYcpjXk5eQ0boKL/dRTQOBaOmfW1V/VZTiOLWwDNvI=')
+print ("AKUN BOTTROX Ghost 1")
+kz = LineClient()
+#kz = LineClient(authToken='EFJTzjjyM6qK83TuXbzf.MJLhO5r7vO8MsXweQmErVW.XTYcpjXk5eQ0boKL/dRTQOBaOmfW1V/VZTiOLWwDNvI=')
 kz.log("Auth Token : " + str(kz.authToken))
 channel2 = LineChannel(kz)
 kz.log("Channel Access Token : " + str(channel2.channelAccessToken))
-
-#kw = LineClient()
-kw = LineClient(authToken='EFJTzjjyM6qK83TuXbzf.MJLhO5r7vO8MsXweQmErVW.XTYcpjXk5eQ0boKL/dRTQOBaOmfW1V/VZTiOLWwDNvI=')
+print ("AKUN BOTTROX Anjtijs 1")
+kw = LineClient()
+#kw = LineClient(authToken='EFJTzjjyM6qK83TuXbzf.MJLhO5r7vO8MsXweQmErVW.XTYcpjXk5eQ0boKL/dRTQOBaOmfW1V/VZTiOLWwDNvI=')
 kw.log("Auth Token : " + str(kw.authToken))
 channel3 = LineChannel(kw)
 kw.log("Channel Access Token : " + str(channel3.channelAccessToken))
@@ -1274,11 +1274,11 @@ def bot(op):
 
         if op.type == 55:
             try:
-                if op.param1 in Setmain["ADITMADZSreadPoint"]:
-                   if op.param2 in Setmain["ADITMADZSreadMember"][op.param1]:
+                if op.param1 in Setmain["readPoint"]:
+                   if op.param2 in Setmain["readMember"][op.param1]:
                        pass
                    else:
-                       Setmain["ADITMADZSreadMember"][op.param1][op.param2] = True
+                       Setmain["readMember"][op.param1][op.param2] = True
                 else:
                    pass
             except:
@@ -1699,17 +1699,17 @@ def bot(op):
 
                if msg.contentType == 1:
                    if msg._from in owner:
-                       if mid in Setmain["ADITMADZSfoto"]:
+                       if mid in Setmain["foto"]:
                             path = satria.downloadObjectMsg(msg_id)
-                            del Setmain["ADITMADZSfoto"][mid]
+                            del Setmain["foto"][mid]
                             satria.updateProfilePicture(path)
                             satria.sendMessage(msg.to,"Foto berhasil dirubah")
 
                if msg.contentType == 1:
                  if msg._from in owner:
-                        if Amid in Setmain["ADITMADZSfoto"]:
+                        if Amid in Setmain["foto"]:
                             path = ki.downloadObjectMsg(msg_id)
-                            del Setmain["ADITMADZSfoto"][Amid]
+                            del Setmain["foto"][Amid]
                             ki.updateProfilePicture(path)
                             ki.sendMessage(msg.to,"Foto berhasil dirubah")
 
@@ -2234,12 +2234,12 @@ def bot(op):
                         elif cmd == "updatefoto":
                           if wait["selfbot"] == True:
                             if msg._from in owner:
-                                Setmain["ADITMADZSfoto"][mid] = True
+                                Setmain["foto"][mid] = True
                                 satria.sendMessage(msg.to,"Kirim fotonya.....")
                                 
                         elif cmd == "bot1up":
                             if msg._from in owner:
-                                Setmain["ADITMADZSfoto"][Amid] = True
+                                Setmain["foto"][Amid] = True
                                 ki.sendMessage(msg.to,"Kirim fotonya.....")
                                
 
@@ -2524,8 +2524,8 @@ def bot(op):
                             if msg._from in admin:
                                  tz = pytz.timezone("Asia/Jakarta")
                                  timeNow = datetime.now(tz=tz)
-                                 Setmain['ADITMADZSreadPoint'][msg.to] = msg_id
-                                 Setmain['ADITMADZSreadMember'][msg.to] = {}
+                                 Setmain['readPoint'][msg.to] = msg_id
+                                 Setmain['readMember'][msg.to] = {}
                                  satria.sendMessage(msg.to, "CCTV berhasil diaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
                             
                         elif cmd == "cctv off":
@@ -2533,16 +2533,16 @@ def bot(op):
                             if msg._from in admin:
                                  tz = pytz.timezone("Asia/Jakarta")
                                  timeNow = datetime.now(tz=tz)
-                                 del Setmain['ADITMADZSreadPoint'][msg.to]
-                                 del Setmain['ADITMADZSreadMember'][msg.to]
+                                 del Setmain['readPoint'][msg.to]
+                                 del Setmain['readMember'][msg.to]
                                  satria.sendMessage(msg.to, "CCTV berhasil dinoaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
                             
                         elif cmd == "ciduk":
                           if msg._from in admin:
-                            if msg.to in Setmain['ADITMADZSreadPoint']:
-                                if Setmain['ADITMADZSreadMember'][msg.to] != {}:
+                            if msg.to in Setmain['readPoint']:
+                                if Setmain['readMember'][msg.to] != {}:
                                     nad = []
-                                    for x in Setmain['ADITMADZSreadMember'][msg.to]:
+                                    for x in Setmain['readMember'][msg.to]:
                                         nad.append(x)
                                     try:
                                         arrData = ""
@@ -2577,12 +2577,12 @@ def bot(op):
                                     except:
                                         pass
                                     try:
-                                        del Setmain['ADITMADZSreadPoint'][msg.to]
-                                        del Setmain['ADITMADZSreadMember'][msg.to]
+                                        del Setmain['readPoint'][msg.to]
+                                        del Setmain['readMember'][msg.to]
                                     except:
                                         pass
-                                    Setmain['ADITMADZSreadPoint'][msg.to] = msg.id
-                                    Setmain['ADITMADZSreadMember'][msg.to] = {}
+                                    Setmain['readPoint'][msg.to] = msg.id
+                                    Setmain['readMember'][msg.to] = {}
                                 else:
                                     satria.sendMessage(msg.to, "User kosong...")
                             else:
@@ -2934,7 +2934,7 @@ def bot(op):
                                 proses = text.split(":")
                                 strnum = text.replace(proses[0] + ":","")
                                 num =  int(strnum)
-                                Setmain["ADITMADZSlimit"] = num
+                                Setmain["limit"] = num
                                 satria.sendMessage(msg.to,"Total Spamtag Diubah Menjadi " +strnum)
 
                         elif cmd.startswith("spamcall: "):
@@ -2965,7 +2965,7 @@ def bot(op):
                                     msg.text = zxc
                                     lol = {'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}
                                     msg.contentMetadata = lol
-                                    jmlh = int(Setmain["ADITMADZSlimit"])
+                                    jmlh = int(Setmain["limit"])
                                     if jmlh <= 1000:
                                         for x in range(jmlh):
                                             try:
@@ -4785,7 +4785,7 @@ def bot(op):
                               if spl in [""," ","\n",None]:
                                   satria.sendMessage(msg.to, "Gagal mengganti Spam")
                               else:
-                                  Setmain["ADITMADZSmessage1"] = spl
+                                  Setmain["message1"] = spl
                                   satria.sendMessage(msg.to, "「Spam Msg」\nSpam Message diganti jadi :\n\n「{}」".format(str(spl)))
 
                         elif 'Set sider: ' in msg.text:
